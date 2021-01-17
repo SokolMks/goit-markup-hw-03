@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Переменные цвета */
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #2f303a;
+}
+
+/* Стилизация частей страницы */
+header {
+  background-color: var(--primary-background-color);
+}
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+footer {
+  background-color: var(--secondary-background-color);
+}
+
+address{
+  font-style: normal;
+}
+
+
+/* Общие правила */
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.button {
+  text-decoration: none;
+  border: none;
+  
+}
+.button:focus {
+  border-color: var(--accent-color);
+}
+.visually-hidden {
+  /*
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);  IE6, IE7 
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; 
+  */
+  display: none;
+}
+
+/* Стилизация лого */
+.logo {
+  color:#000000;
+  font-family: Raleway, cursive;
+
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-footer {
+  color: var(--primary-background-color);
+}
+.logo-part {
+  color: var(--accent-color);
+}
+.logo-header:focus,
+.logo-footer:focus {
+  color: var(--accent-color);
+}
+
+/* Стилизация навбара */
+.site-nav .link {
+  color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* Стилизация навбар адреса */
+.contact-nav .link {
+  color: var(--primary-text-color);
+
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.contact-nav .link:hover,
+.contact-nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* Стилизация футера */
+.street-address {
+  color: var(--primary-background-color);
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+.contact-address .link {
+  color: var(--primary-background-color);
+  opacity: 60%;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+.contact-address .link:hover,
+.contact-address .link:focus {
+  color: var(--accent-color);
+}
+
+/* Стилизация index.html */
+/* Общие стилизации секций */
+.section-title {
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+
+/* Стилизация героя */
+.hero {
+  background-color: var(--secondary-background-color);
+}
+.hero-title {
+  color: var(--primary-background-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* or 136% */
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-button {
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Стилизация секции "Чем мы занимаемся" */
+.pick-us{
+  font-size: 14px;
+  line-height: 1.71;
+}
+.pick-us .title {
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* Стилизация секции "Наша команда" */
+.our-team {
+  background-color: #f5f4fa;
+
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+  text-align: center;
+}
+.our-team .title {
+  color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+  text-align: center;
+}
+
+
+/* Стилизация portfolio.html */
+/* Стилизация кнопок */
+.nav-buttons .button {
+  background-color: #f5f4fa;
+  color: #212121;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  /* identical to box height, or 162% */
+  text-align: center;
+} 
+.nav-buttons .button:hover,
+.nav-buttons .button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+}
+
+/* Стилизация карточек */
+.card {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.87;
+}
+.card-title {
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+  letter-spacing: 0.06em;
+}
+
+
+ 
