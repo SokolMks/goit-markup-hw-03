@@ -360,7 +360,7 @@ address{
 .cards-item {
   margin-right: 15px;
   margin-bottom: 15px;
-  flex-basis: calc((100% - 3 * 15px) / 3);
+
   max-width: 370px;
 
   display: flex;
