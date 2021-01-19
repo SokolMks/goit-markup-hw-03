@@ -12,6 +12,9 @@
 }
 
 /* Стилизация частей страницы */
+img {
+  display: block;
+}
 header {
   background-color: var(--primary-background-color);
 }
@@ -40,7 +43,7 @@ address{
 }
 .button {
   text-decoration: none;
-  border: none;
+  border: 1px solid transparent;
   
 }
 .button:focus {
@@ -59,18 +62,33 @@ address{
   */
   display: none;
 }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding: 94px 0px;
+}
 
 /* Стилизация лого */
 .logo {
+  margin-right: 93px;
+  letter-spacing: 0.03em;
+
   color:#000000;
   font-family: Raleway, cursive;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 .logo-footer {
   color: var(--primary-background-color);
+  display: block;
+  margin-bottom: 20px;
 }
 .logo-part {
   color: var(--accent-color);
@@ -81,6 +99,34 @@ address{
 }
 
 /* Стилизация навбара */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  align-items: baseline;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contact-nav-item:not(:last-child){
+  margin-right: 50px;
+}
+.address {
+  margin-left: auto;
+}
+.address-list {
+  display: flex;
+}
 .site-nav .link {
   color: var(--title-text-color);
 
@@ -113,6 +159,9 @@ address{
 }
 
 /* Стилизация футера */
+.footer{
+  padding: 60px 0px;
+}
 .street-address {
   color: var(--primary-background-color);
 
@@ -130,24 +179,36 @@ address{
 .contact-address .link:focus {
   color: var(--accent-color);
 }
+.contact-address-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.street-address{
+  margin-bottom: 10px;
+}
 
 /* Стилизация index.html */
 /* Общие стилизации секций */
 .section-title {
   color: var(--title-text-color);
+  margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  letter-spacing: 0.03em;
+  line-height: 1.16;
   text-align: center;
 }
 
 /* Стилизация героя */
 .hero {
   background-color: var(--secondary-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 .hero-title {
   color: var(--primary-background-color);
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -158,31 +219,53 @@ address{
   text-transform: uppercase;
 }
 .hero-button {
-  background-color: var(--accent-color);
-  color: var(--primary-background-color);
-
-  font-family: inherit;
+  border-style: none;
+  padding: 10px 30px;
+  min-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  /* identical to box height, or 187% */
-  display: flex;
+  letter-spacing: 0.06em;
+  
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+  border: none;
+  font-family: inherit;
+
   align-items: center;
   text-align: center;
 }
 
-/* Стилизация секции "Чем мы занимаемся" */
+/* Стилизация секции "Почему стоит выбрать нас?" */
+.advantages {
+  padding-top: 94px;
+}
 .pick-us{
   font-size: 14px;
   line-height: 1.71;
+  display: flex;
+  justify-content: space-between;
 }
 .pick-us .title {
   color: var(--title-text-color);
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+.pick-us-list-item {
+  width: 270px;
+  height: 100px;
+}
+
+/* Стилизация секции "Чем мы занимаемся?" */
+.services-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Стилизация секции "Наша команда" */
@@ -193,9 +276,12 @@ address{
   line-height: 1.18;
   /* identical to box height */
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 .our-team .title {
   color: var(--title-text-color);
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -203,11 +289,43 @@ address{
   /* identical to box height */
   text-align: center;
 }
-
+.box {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  align-items: center;
+}
+.member-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 /* Стилизация portfolio.html */
+.bottom-underline {
+  border: 1px solid #ececec;
+}
+.navigations {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 /* Стилизация кнопок */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+}
 .nav-buttons .button {
+  border-style: none;
+  padding: 6px 22px;
+  height: 38px;
+  border-radius: 4px;
+  border: none;
+
   background-color: #f5f4fa;
   color: #212121;
 
@@ -215,6 +333,7 @@ address{
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   /* identical to box height, or 162% */
   text-align: center;
 } 
@@ -222,16 +341,50 @@ address{
 .nav-buttons .button:focus {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Стилизация карточек */
+.projects {
+  padding-bottom: 94px;
+}
+.projects-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-top: 0px;
+  padding: 0px;
+}
+.cards-item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  flex-basis: calc((100% - 3 * 15px) / 3);
+  max-width: 370px;
+
+  display: flex;
+  flex-direction: column;
+}
+.cards-text {
+  padding: 20px 23px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+
 .card {
   color: var(--primary-text-color);
 
   font-size: 16px;
   line-height: 1.87;
 }
+
 .card-title {
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -240,6 +393,3 @@ address{
   /* identical to box height, or 200% */
   letter-spacing: 0.06em;
 }
-
-
- 
