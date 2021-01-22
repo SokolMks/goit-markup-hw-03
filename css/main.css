@@ -12,9 +12,6 @@
 }
 
 /* Стилизация частей страницы */
-img {
-  display: block;
-}
 header {
   background-color: var(--primary-background-color);
 }
@@ -32,6 +29,10 @@ footer {
 address{
   font-style: normal;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 
 
 /* Общие правила */
@@ -43,7 +44,7 @@ address{
 }
 .button {
   text-decoration: none;
-  border: 1px solid transparent;
+  border: none;
   
 }
 .button:focus {
@@ -63,32 +64,30 @@ address{
   display: none;
 }
 .container {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.section {
-  padding: 94px 0px;
+  padding: 0 15px;
 }
 
 /* Стилизация лого */
 .logo {
   margin-right: 93px;
-  letter-spacing: 0.03em;
 
   color:#000000;
   font-family: Raleway, cursive;
 
+  letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 .logo-footer {
   color: var(--primary-background-color);
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
+  margin-right: auto;
+  padding-right: auto;
 }
 .logo-part {
   color: var(--accent-color);
@@ -99,34 +98,25 @@ address{
 }
 
 /* Стилизация навбара */
-.header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
 .header .container {
   display: flex;
   align-items: center;
 }
-.navigation {
-  display: flex;
-  align-items: baseline;
-}
 .site-nav {
   display: flex;
-  align-items: center;
+  padding-left: 0;
+  margin: 0;
 }
-.site-nav-item:not(:last-child) {
+.nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-nav-item:not(:last-child){
-  margin-right: 50px;
+.nav-link, .address-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-.address {
-  margin-left: auto;
-}
-.address-list {
-  display: flex;
-}
+
+
 .site-nav .link {
   color: var(--title-text-color);
 
@@ -144,6 +134,13 @@ address{
 }
 
 /* Стилизация навбар адреса */
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 .contact-nav .link {
   color: var(--primary-text-color);
 
@@ -159,14 +156,19 @@ address{
 }
 
 /* Стилизация футера */
-.footer{
-  padding: 60px 0px;
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .street-address {
+  display: block;
   color: var(--primary-background-color);
 
   font-size: 14px;
   line-height: 1.71;
+}
+.str-address:not(:last-child) {
+  margin-bottom: 9px;
 }
 .contact-address .link {
   color: var(--primary-background-color);
@@ -179,35 +181,30 @@ address{
 .contact-address .link:focus {
   color: var(--accent-color);
 }
-.contact-address-item:not(:last-child) {
-  margin-bottom: 10px;
-}
-.street-address{
-  margin-bottom: 10px;
-}
 
 /* Стилизация index.html */
 /* Общие стилизации секций */
 .section-title {
   color: var(--title-text-color);
-  margin-bottom: 50px;
 
+  letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 36px;
-  letter-spacing: 0.03em;
-  line-height: 1.16;
+  line-height: 42px;
   text-align: center;
 }
 
 /* Стилизация героя */
 .hero {
   background-color: var(--secondary-background-color);
+  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  text-align: center;
 }
 .hero-title {
   color: var(--primary-background-color);
+  padding-left: auto;
+  padding-right: auto;
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -219,69 +216,89 @@ address{
   text-transform: uppercase;
 }
 .hero-button {
-  border-style: none;
-  padding: 10px 30px;
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+
   min-width: 200px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--accent-color);
+  padding: 10px 30px;
+
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  
-  background-color: var(--accent-color);
-  color: var(--primary-background-color);
-  border: none;
-  font-family: inherit;
-
-  align-items: center;
+  /* identical to box height, or 187% */
   text-align: center;
 }
 
 /* Стилизация секции "Почему стоит выбрать нас?" */
 .advantages {
-  padding-top: 94px;
+  padding: 94px 0;
+}
+.adv-title {
+  margin-bottom: 10px;
+  width: 270px;
 }
 .pick-us{
+  display: flex;
+  padding-left: 0;
+  margin: 0;
   font-size: 14px;
   line-height: 1.71;
-  display: flex;
-  justify-content: space-between;
+}
+.pick-us-item:not(:last-child) {
+  margin-right: 30px;
+}
+.description {
+  width: 270px;
 }
 .pick-us .title {
   color: var(--title-text-color);
-  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.pick-us-list-item {
-  width: 270px;
-  height: 100px;
+/* Cтилизация секции "Чем мы занимаемся" */
+.what-wedo {
+  padding: 0 0 94px 0;
 }
-
-/* Стилизация секции "Чем мы занимаемся?" */
-.services-list {
+.wedo-title {
+  margin-bottom: 50px;
+}
+.wedo-list {
   display: flex;
-  justify-content: space-between;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
+.wedo-item:not(:last-child) {
+  margin-right: 30px;
+}
 /* Стилизация секции "Наша команда" */
-.our-team {
+.team {
+  padding: 94px 0;
   background-color: #f5f4fa;
+}
+.ourt-title {
+  margin-bottom: 50px;
+}
+.our-team {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 
   font-size: 16px;
   line-height: 1.18;
   /* identical to box height */
   text-align: center;
-  display: flex;
-  justify-content: space-between;
 }
 .our-team .title {
   color: var(--title-text-color);
-  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -289,45 +306,44 @@ address{
   /* identical to box height */
   text-align: center;
 }
-.box {
-  display: flex;
-  flex-direction: column;
-  background: var(--primary-background-color);
+.our-team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.our-team-item {
+  background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  align-items: center;
 }
 .member-box {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.member-box .title {
+  margin-bottom: 10px;
 }
 
 /* Стилизация portfolio.html */
 .bottom-underline {
   border: 1px solid #ececec;
 }
-.navigations {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-.filter-item:not(:last-child) {
-  margin-right: 8px;
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Стилизация кнопок */
 .nav-buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 0;
+  margin-left: 0;
 }
 .nav-buttons .button {
-  border-style: none;
-  padding: 6px 22px;
-  height: 38px;
-  border-radius: 4px;
-  border: none;
-
   background-color: #f5f4fa;
   color: #212121;
+  padding: 6px 22px;
+  border-radius: 4px;
 
   font-family: inherit;
   font-weight: 500;
@@ -341,30 +357,36 @@ address{
 .nav-buttons .button:focus {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.btn-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* Стилизация карточек */
-.projects {
-  padding-bottom: 94px;
-}
 .projects-cards {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-bottom: -15px;
-  margin-top: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
 }
-.cards-item {
-  margin-right: 15px;
-  margin-bottom: 15px;
-
+.project-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
   max-width: 370px;
-
   display: flex;
   flex-direction: column;
+}
+.project-item:nth-child(3n){
+  margin-right: 0px;
+}
+.project-item:nth-last-child(-n + 3){
+  margin-bottom: 0px;
+}
+.card {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.87;
 }
 .cards-text {
   padding: 20px 23px;
@@ -373,19 +395,9 @@ address{
   border-bottom: 1px solid #eeeeee;
   box-sizing: border-box;
 }
-
-
-.card {
-  color: var(--primary-text-color);
-
-  font-size: 16px;
-  line-height: 1.87;
-}
-
 .card-title {
-  margin-bottom: 4px;
-
   color: var(--title-text-color);
+  margin-bottom: 4px;
 
   font-weight: 700;
   font-size: 18px;
@@ -393,3 +405,6 @@ address{
   /* identical to box height, or 200% */
   letter-spacing: 0.06em;
 }
+
+
+ 
